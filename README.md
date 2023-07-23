@@ -8,6 +8,7 @@
 <ins> To do </ins>
 - [ ] preprocess and threshold
   - [ ] import raw data
+    - [ ] make MATLAB script output indices of epochs & raw data
   - [ ] reject bad channels
   - [ ] bandpass filter
   - [ ] global PCA noise reduction
