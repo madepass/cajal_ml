@@ -1,5 +1,5 @@
 %% Data path
-save_name = 'dataSorted_0_right.mat';
+save_name = 'dataSorted_135_left.mat';
 datapath = '/media/maikito/01D6CFB346EBEA501/work/dancause_data/stroke/stroke_data/20180608Y';
 savepath = '/home/maikito/mad/cajal_summer_school/project/processed_data';
 % savepath = 'D:\ub_neuroComp\dancause_data\processing\2_prestroke_actions\export';
@@ -13,10 +13,10 @@ addpath(savepath)
 
 %% Detect and select files
 hand = {'Left'}; %'Left'
-precision_angle = {'Precision_0'}; % '0','45','90','135'};
+precision_angle = {'Precision_135'}; % '0','45','90','135'};
 aligned_to = {'GraspStart'}; %'CueOn'
-spikes = {'spikes'}; % Why did I choose spikeFree???
-% data_options = [hand, aligned_to, spikes];x
+spikes = {'spikes'}; % 'spikeFree', or any other string for spikes
+% data_options = [hand, aligned_to, spikes]; 
 
 %% Channel2Electrode Map
 PMv_left = [110 112 105 107 109 111 97 99 101 103 98 100 102 104 106 108 90 88 86 92 94 96 89 91 93 95 173 175 177 179 81 83 85 87 82 84 169 171 166 168 170 172 174 176 178 180 154 160 162 164 157 159 161 163 165 167 149 151 153 155 150 152 158 156];
@@ -50,7 +50,7 @@ end
 
 files_to_load_right = file_names(inds);
 %% Load Data
-n_trials = 35;
+n_trials = length(files_to_load_right);
 
 cueOns = zeros(1,n_trials);
 cueOffs = zeros(1,n_trials);

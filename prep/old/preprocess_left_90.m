@@ -1,5 +1,5 @@
 %% Data path
-save_name = 'dataSorted_135_right.mat';
+save_name = 'dataSorted_90_left.mat';
 datapath = '/media/maikito/01D6CFB346EBEA501/work/dancause_data/stroke/stroke_data/20180608Y';
 savepath = '/home/maikito/mad/cajal_summer_school/project/processed_data';
 % savepath = 'D:\ub_neuroComp\dancause_data\processing\2_prestroke_actions\export';
@@ -12,8 +12,8 @@ addpath('/media/maikito/01D6CFB346EBEA501/work/dancause_data/processing/2_prestr
 addpath(savepath)
 
 %% Detect and select files
-hand = {'Right'}; %'Left'
-precision_angle = {'Precision_135'}; % '0','45','90','135'};
+hand = {'Left'}; %'Left'
+precision_angle = {'Precision_90'}; % '0','45','90','135'};
 aligned_to = {'GraspStart'}; %'CueOn'
 spikes = {'spikes'}; % 'spikeFree', or any other string for spikes
 % data_options = [hand, aligned_to, spikes]; 
@@ -50,7 +50,7 @@ end
 
 files_to_load_right = file_names(inds);
 %% Load Data
-n_trials = 35;
+n_trials = length(files_to_load_right);
 
 cueOns = zeros(1,n_trials);
 cueOffs = zeros(1,n_trials);

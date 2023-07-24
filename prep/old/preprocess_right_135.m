@@ -12,7 +12,7 @@ addpath('/media/maikito/01D6CFB346EBEA501/work/dancause_data/processing/2_prestr
 addpath(savepath)
 
 %% Detect and select files
-hand = {'Left'}; %'Left'
+hand = {'Right'}; %'Left'
 precision_angle = {'Precision_135'}; % '0','45','90','135'};
 aligned_to = {'GraspStart'}; %'CueOn'
 spikes = {'spikes'}; % 'spikeFree', or any other string for spikes
@@ -50,7 +50,7 @@ end
 
 files_to_load_right = file_names(inds);
 %% Load Data
-n_trials = 35;
+n_trials = length(files_to_load_right);
 
 cueOns = zeros(1,n_trials);
 cueOffs = zeros(1,n_trials);

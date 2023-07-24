@@ -1,5 +1,5 @@
 %% Data path
-save_name = 'dataSorted_45_right.mat';
+save_name = 'dataSorted_45_left.mat';
 datapath = '/media/maikito/01D6CFB346EBEA501/work/dancause_data/stroke/stroke_data/20180608Y';
 savepath = '/home/maikito/mad/cajal_summer_school/project/processed_data';
 % savepath = 'D:\ub_neuroComp\dancause_data\processing\2_prestroke_actions\export';
